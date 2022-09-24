@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
 
     val diff = words.size - validWords.size
     if (diff == 0) println("All words are valid!")
-    else println ("Warning: $diff invalid words where find in the $filename file.")
+    else println ("Warning: $diff invalid words were found in the $filename file.")
 
 //    val index = Random.nextInt(0, words.size)
 //    println(words[index])

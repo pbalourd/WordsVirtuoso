@@ -1,1 +1,4 @@
-/Words Virtuoso/stage5/build/tmp/test/jar_extract_2355394692448283381_tmp
+/.gradle/
+.idea/
+build/
+/gradle/wrapper/

@@ -17,12 +17,12 @@ fun main(args: Array<String>) {
     var wordsStr = wordsFile.readLines().map { it.lowercase() }
     val words = wordsStr.filter { isValidWord(it) }
     val diffWords = wordsStr.size - words.size
-    if (diffWords != 0) exitWithMessage("Error: $diffWords invalid words where find in the $wordsFilename file.")
+    if (diffWords != 0) exitWithMessage("Error: $diffWords invalid words were found in the $wordsFilename file.")
 
     wordsStr = candidatesFile.readLines().map { it.lowercase() }
     val candidates = wordsStr.filter { isValidWord(it) }
     val diffCandidates = wordsStr.size - candidates.size
-    if (diffCandidates != 0 ) exitWithMessage("Error: $diffCandidates invalid words where find in the $candidatesFilename file.")
+    if (diffCandidates != 0 ) exitWithMessage("Error: $diffCandidates invalid words were found in the $candidatesFilename file.")
 
     val candidatesNotInWords = candidates.count { it !in words }
     if (candidatesNotInWords != 0) exitWithMessage("Error: $candidatesNotInWords candidate words are not included in the $wordsFilename file.")

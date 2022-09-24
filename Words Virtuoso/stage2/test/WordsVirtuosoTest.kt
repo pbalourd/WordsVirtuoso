@@ -53,10 +53,10 @@ class WordsVirtuosoTest : StageTest<Any>() {
             if (!co.start("Input the words file:"))
                 return CheckResult(false, "Your output should contain \"Input the words file:\"")
             if (!co.input(filename,
-                    "Warning: ${numOfInvalidWords[filename]} invalid words where find in the $filename file."))
+                    "Warning: ${numOfInvalidWords[filename]} invalid words were found in the $filename file."))
                 return CheckResult(
                     false,
-                    "Wrong message for file containing only valid words."
+                    "Wrong message for file containing invalid words."
                 )
             if (!co.programIsFinished())
                 return CheckResult(false, "The application didn't exit.")

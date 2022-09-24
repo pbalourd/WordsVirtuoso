@@ -62,7 +62,7 @@ class WordsVirtuosoTest : StageTest<Any>() {
     fun invalidWordsTest(): CheckResult {
         val co = CheckOutput()
         co.setArguments("wrongwords.txt", "somecandidates.txt")
-        if (!co.start("Error: 7 invalid words where find in the wrongWords.txt file."))
+        if (!co.start("Error: 7 invalid words were found in the wrongWords.txt file."))
             return CheckResult(false,
                 "Wrong error message after input of a words file with invalid words.")
         if (!co.programIsFinished())
@@ -75,7 +75,7 @@ class WordsVirtuosoTest : StageTest<Any>() {
     fun invalidCandidatesTest(): CheckResult {
         val co = CheckOutput()
         co.setArguments("somewords.txt", "wrongcandidates.txt")
-        if (!co.start("Error: 9 invalid words where find in the wrongcandidates.txt file."))
+        if (!co.start("Error: 9 invalid words were found in the wrongcandidates.txt file."))
             return CheckResult(false,
                 "Wrong error message after input of a candidate words file with invalid words.")
         if (!co.programIsFinished())
