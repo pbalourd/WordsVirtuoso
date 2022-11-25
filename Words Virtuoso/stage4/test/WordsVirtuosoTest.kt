@@ -137,11 +137,11 @@ class WordsVirtuosoTest : StageTest<Any>() {
                             "\nInput a 5-letter word:\"")
         }
 
-        val duplicatedLetters = listOf("walls", "hello", "pizza")
-        duplicatedLetters.forEach { input ->
-            if (!co.input(input, "The input has duplicated letters.", "Input a 5-letter word:"))
+        val duplicateLetters = listOf("walls", "hello", "pizza")
+        duplicateLetters.forEach { input ->
+            if (!co.input(input, "The input has duplicate letters.", "Input a 5-letter word:"))
                 return CheckResult(false,
-                    "Your output should contain \"The input has duplicated letters." +
+                    "Your output should contain \"The input has duplicate letters." +
                             "\nInput a 5-letter word:\"")
         }
 

@@ -57,7 +57,7 @@ fun main(args: Array<String>) {
                     continue
                 }
                 if (!hasUniqueLetters(input)) {
-                    println("The input has duplicated letters.\n")
+                    println("The input has duplicate letters.\n")
                     continue
                 }
                 if (input !in words) {
